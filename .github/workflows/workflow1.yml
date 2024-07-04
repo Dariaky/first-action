@@ -12,7 +12,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.npm
-          key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
+          key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}     # for getting the cache
 
       - name: Install dependencies
         run: npm install
@@ -70,4 +70,4 @@ jobs:
       - name: Deploy application
         run: |
           echo "Deploying application"
-          echo "Deployed successfully"
+          echo "Deployed successfully!"
